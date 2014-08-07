@@ -1,0 +1,2 @@
+Samtools, the basic swiss army knife; this package installs the binary
+`samtools` but not the library `libbam`.
