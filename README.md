@@ -23,3 +23,11 @@ For instance, let's say you got Opam with `apt-get install opam`
     opam install samtools vcftools
 
 
+Notes
+-----
+
+As a proof-of-concept there is a TMux package and its dependency: the library
+`libevent`; they work but require the following setup at runtime:
+
+    export LD_LIBRARY_PATH=`opam config var prefix`/lib:$LD_LIBRARY_PATH
+
