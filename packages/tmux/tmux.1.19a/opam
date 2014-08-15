@@ -2,7 +2,8 @@ opam-version: "1"
 maintainer: "seb@mondet.org"
 homepage: "http://tmux.sourceforge.net/"
 build: [
-  ["sh" "configure" "--prefix" prefix]
+  ["sh" "configure" "--prefix" prefix "CFLAGS=-I%{prefix}%/include" "LDFLAGS=-L%{prefix}%/lib" "CPPFLAGS=-I%{prefix}%/include"]
   [make]
   [make "install"]
 ]
+depends: ["libevent"]

@@ -1,0 +1,8 @@
+opam-version: "1"
+maintainer: "seb@mondet.org"
+homepage: "http://libevent.org/"
+build: [
+  ["sh" "configure" "--prefix" prefix]
+  [make]
+  [make "install"]
+]
